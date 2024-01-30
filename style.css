@@ -1,0 +1,138 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;;
+    background-image: url(spiderman.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+}
+.bg-2{
+    display: none;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+.main{
+    position: relative;
+    /* left: 40%;
+    top: 50%;
+    transform: translateX(-50%);
+    transform: translateY(-50%); */
+    height: 350px;
+    width: 270px;
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    margin: 10px;
+    padding: 5px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+h1, #email, #password{
+    margin: 5px;
+}
+#email, #password{
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 8px;
+}
+input[type="email"]::placeholder {
+    color: white; /* Set the desired color */
+  }
+  input[type="password"]::placeholder {
+    color: white; /* Set the desired color */
+  }
+#checkbox, .center-p, .center-a{
+    font-size: small;
+}
+.center-a{
+    color: white;
+    text-decoration: none;
+    font-size: small;
+    position: relative;
+    left: 20px;
+}
+#checkbox, .center-p{
+    position: relative;
+    padding: 5px;
+    right: 20px;
+}
+input[type="checkbox"] {
+    /* ...existing styles */
+    display: grid;
+    place-content: center;
+  }
+  
+  input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+  }
+  
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+  
+#submit{
+    position: relative;
+    top: 20px;
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    font-size: medium;
+}
+#submit:hover{
+    background-color: white;
+    color: black;
+}
+.footer{
+    margin: 10px;
+    position: relative;
+    top: 40px;
+    font-size: small;
+}
+#footer-a{
+    color: white;
+    text-decoration: none;
+}
+h1, #email, #password, #checkbox, .center-p, .center-a, #submit, .footer .main{
+    filter: blur();
+}
+@media screen and (max-width: 600px) {
+    body{
+        height: 100vh;
+        width: 100%;
+        background-image: url();
+        background-color: rgba(0, 0, 0, 0.438);
+    }
+    .main{
+        height: 350px;
+        width: 270px;
+    }
+    .bg-2{
+        display: initial;
+    }
+  }
